@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-init-script
+  namespace: mongodb-replica
+data:
+  init.js: |
+    rs.initiate({
+      _id: "rs0",
+      members: [
+        { _id: 0, host: "mongo-0.mongo.mongodb-replica.svc.cluster.local:27017" },
+        { _id: 1, host: "mongo-1.mongo.mongodb-replica.svc.cluster.local:27017" },
+        { _id: 2, host: "mongo-2.mongo.mongodb-replica.svc.cluster.local:27017" }
+      ]
+    })
