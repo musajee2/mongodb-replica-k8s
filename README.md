@@ -21,8 +21,6 @@ This project demonstrates how to deploy a **MongoDB Replica Set** using **Kubern
 | `mongo-service.yaml`       | Headless Service for MongoDB internal networking |
 | `mongo-statefulset.yaml`   | StatefulSet defining 3 MongoDB pods with persistent volumes |
 | `mongo-init.yaml` *(optional)* | Init container for one-time replica set initiation |
-| `journal-report.md` or `.pdf` | Academic journal describing the task implementation |
-| `screenshots/`             | Folder containing setup and verification screenshots |
 
 ---
 
